@@ -151,6 +151,7 @@ public class MainFragment extends Fragment {
 
     private ArrayList<NoteItem> getData() {
         NoteController controller = new NoteController(getContext());
+        //controller.themcot();
         return controller.getListNote();
     }
 

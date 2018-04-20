@@ -55,6 +55,8 @@ public class NoteItemAdapter extends BaseAdapter {
         ImageView imgicon2= (ImageView) view.findViewById(R.id.imgicon2);
         TextView txtConten= (TextView) view.findViewById(R.id.txtContent);
         TextView txtDate= (TextView) view.findViewById(R.id.txttime);
+        TextView txtEmail = (TextView) view.findViewById(R.id.txtEmail);
+
         icon.setImageBitmap(bmIcon);
         if (ni.getNotify()==1){
             imgicon1.setImageResource(R.drawable.ic_notifications_white_24dp);
@@ -69,6 +71,7 @@ public class NoteItemAdapter extends BaseAdapter {
         }
         txtConten.setText(ni.getContent());
         txtDate.setText(ni.getDate().toString());
+        txtEmail.setText("ni.getEmail()");
         return view;
     }
 }

@@ -15,6 +15,7 @@ public class NoteItem implements Serializable {
     private int notify;
     private String location;
     private String date;
+    private String email;
 
     public NoteItem(int ID, String content, byte[] icon, int typeID, int notify, String location, String date) {
         this.ID = ID;
@@ -102,6 +103,14 @@ public class NoteItem implements Serializable {
 
     public String getDate() {
         return date;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setDate(String date) {

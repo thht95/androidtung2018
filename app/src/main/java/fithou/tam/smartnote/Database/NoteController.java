@@ -19,6 +19,12 @@ public class NoteController extends SQLiteDataController {
     public NoteController(Context con) {
         super(con);
     }
+    public void themcot(){
+        openDataBase();
+        String cauTV = "ALTER TABLE NOTE ADD COLUMN EMAIL STRING DEFAULT email@gmail.com";
+        database.execSQL(cauTV);
+    }
+
     public ArrayList<NoteItem> getListNote() {
         ArrayList<NoteItem> ds = new ArrayList<>();
         try {
@@ -40,7 +46,10 @@ public class NoteController extends SQLiteDataController {
                 String location=cs.getString(4);
                 String date=cs.getString(5);
                 byte[] Icon=cs.getBlob(6);
+                String email = cs.getString(7);
                 note = new NoteItem(ID,Content,Icon,TypeID,notify,location,date);
+                note.setEmail(email);
+
                 ds.add(note);
             }
 
@@ -65,6 +74,7 @@ public class NoteController extends SQLiteDataController {
             values.put("notify", noteItem.getNotify());
             values.put("location", noteItem.getLocation());
             values.put("Date", noteItem.getDate());
+            values.put("Email", noteItem.getEmail());
             long id = database.insert("Note", null, values);
             //id chinh la id duoc tu tang cua bang nhan vien
             //Neu ma insert thanh cong thi id no se phai >=0
@@ -90,6 +100,7 @@ public class NoteController extends SQLiteDataController {
             values.put("notify", noteItem.getNotify());
             values.put("location", noteItem.getLocation());
             values.put("Date", noteItem.getDate());
+            values.put("Email", noteItem.getEmail());
 
             int id = database.update("Note", values,
                     "ID = " + noteItem.getID(), null);

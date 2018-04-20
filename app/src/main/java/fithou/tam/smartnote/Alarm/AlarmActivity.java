@@ -61,6 +61,7 @@ public class AlarmActivity extends AppCompatActivity {
             String date= DateFormat.getDateInstance().format(new Date());
             String content=""+calendar.getTime().getHours()+":"+calendar.getTime().getMinutes();
             NoteItem ni = new NoteItem(content,TypeID,1,"",date);
+
             NoteController sql = new NoteController(AlarmActivity.this);
             boolean kq = sql.insertNote(ni);
             if (kq) {

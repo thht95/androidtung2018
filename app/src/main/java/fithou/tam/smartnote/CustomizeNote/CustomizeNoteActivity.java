@@ -65,6 +65,7 @@ import fithou.tam.smartnote.System.NotifyService;
 
 public class CustomizeNoteActivity extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     EditText edtNote;
+    EditText edtEmail;
     ImageView imgLocation, imgWeather, imgNotify;
     TextView txtweather, txtlocation, txtnotify;
     ArrayList<String> arrWeather=null;
@@ -93,6 +94,7 @@ public class CustomizeNoteActivity extends AppCompatActivity implements View.OnC
 
     private void LoadControlls() {
         edtNote = (EditText) findViewById(R.id.edtNote);
+        edtEmail =  (EditText) findViewById(R.id.edtEmail);
         imgLocation = (ImageView) findViewById(R.id.imgLocation);
         imgNotify = (ImageView) findViewById(R.id.imgNotify);
         imgWeather = (ImageView) findViewById(R.id.imgWeather);
@@ -134,6 +136,7 @@ public class CustomizeNoteActivity extends AppCompatActivity implements View.OnC
 
                 String date= DateFormat.getDateInstance().format(new Date());
                 NoteItem ni = new NoteItem(content,TypeID,notify,slocation,date);
+                ni.setEmail(edtEmail.getText().toString());
                 NoteController sql = new NoteController(CustomizeNoteActivity.this);
                 boolean kq = sql.insertNote(ni);
                 if (kq) {
