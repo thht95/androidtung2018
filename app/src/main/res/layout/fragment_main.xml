@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context="fithou.tam.smartnote.Main.MainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:layout_marginTop="20dp"
+        android:headerDividersEnabled="true"
+        android:footerDividersEnabled="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/lvAlldata"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:dividerHeight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+</FrameLayout>

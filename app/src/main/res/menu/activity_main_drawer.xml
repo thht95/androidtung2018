@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_all"
+            android:icon="@drawable/ic_view_module_black_24dp"
+            android:title="Tất cả ghi chú" />
+        <item
+            android:id="@+id/nav_group"
+            android:icon="@drawable/ic_format_list_bulleted_black_24dp"
+            android:title="Nhóm" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Cài đặt" />
+    </group>
+
+    <item
+        android:id="@+id/nav_info"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="Giới thiệu" />
+
+
+</menu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center"
+    android:minHeight="20dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imgWeather"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/icon_footer_selector"
+        android:src="@drawable/ic_filter_drama_black_24dp"
+        android:layout_weight="2"
+         />
+
+
+    <ImageView
+        android:id="@+id/imgLocation"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="2"
+        android:background="@drawable/icon_footer_selector"
+        android:src="@drawable/ic_room_black_24dp" />
+
+
+    <ImageView
+        android:id="@+id/imgNotify"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="2"
+        android:background="@drawable/icon_footer_selector"
+        android:src="@drawable/ic_access_alarm_black_48dp" />
+
+
+</LinearLayout>
